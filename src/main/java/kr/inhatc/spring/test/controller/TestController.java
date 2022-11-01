@@ -11,7 +11,7 @@ public class TestController {
 
 	@GetMapping(value = "/hello")
 	public String hello() {
-		return "Hello World 123";
+		return "Hello World 12";
 	}
 	
 	//웹으로 객체(TestDto) 반환 시 json(key:value)형태로 전달됨
