@@ -13,6 +13,7 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 import kr.inhatc.spring.item.constant.ItemSellStatus;
+import kr.inhatc.spring.utils.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,7 +34,7 @@ import net.bytebuddy.asm.Advice.Local;
 @ToString
 @NoArgsConstructor  //디폴트 생성자 생성
 @AllArgsConstructor //필드에 쓴 모든 생성자만 생성
-public class Item {
+public class Item extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "item_id")
@@ -54,9 +55,5 @@ public class Item {
 	@Lob	//데이터베이스에서 VARCHAR보다 큰 데이터를 담고 싶을 때 사용한다
 	@Column(nullable = false)
 	private String itemDetail;	//상품 상세 설명
-	
-	private LocalDateTime regTime;	//등록 시간
-	
-	private LocalDateTime updateTime;	//수정 시간
 	
 }

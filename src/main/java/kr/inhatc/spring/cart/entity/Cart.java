@@ -10,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 import kr.inhatc.spring.member.entity.Member;
+import kr.inhatc.spring.utils.entity.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,7 +21,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor      //기본 생성자
-public class Cart {
+public class Cart extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -12,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import kr.inhatc.spring.member.constant.Role;
 import kr.inhatc.spring.member.dto.MemberFormDto;
+import kr.inhatc.spring.utils.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,7 +25,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor  //디폴트 생성자(파라미터가 없는 생성자를 생성)
 @AllArgsConstructor //클래스에 존재하는 모든 필드에 대한 생성자를 자동으로 생성
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
