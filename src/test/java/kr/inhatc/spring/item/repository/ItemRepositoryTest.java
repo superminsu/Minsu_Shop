@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 import org.thymeleaf.util.StringUtils;
 
 import com.querydsl.core.BooleanBuilder;
@@ -29,6 +30,7 @@ import lombok.extern.log4j.Log4j2;
 
 @SpringBootTest
 @Log4j2
+@Transactional  //테스트할 때만 db 만들고 테스트 끝나면 롤백시킴
 class ItemRepositoryTest {
 
 	@Autowired
