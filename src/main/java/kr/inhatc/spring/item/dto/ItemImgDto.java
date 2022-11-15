@@ -19,6 +19,7 @@ public class ItemImgDto {
     private static ModelMapper modelMapper = new ModelMapper();
     
     public static ItemImgDto of(ItemImg itemImg) {
+        //DTO -> ENTITY
         return modelMapper.map(itemImg, ItemImgDto.class);
     }
 }

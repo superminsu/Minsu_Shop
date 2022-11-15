@@ -41,9 +41,9 @@ public class ItemImg extends BaseEntity{        //파일(이미지) 업로드 �
     
     private String repImgYn;
 
-    public void updateItemImg(String oriName, String imgUrl, String repImgYn) {
+    public void updateItemImg(String oriName, String imgName, String imgUrl) {
         this.oriName = oriName;
+        this.imgName = imgName;
         this.imgUrl = imgUrl;
-        this.repImgYn = repImgYn;
     }
 }

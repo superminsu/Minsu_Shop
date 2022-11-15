@@ -35,7 +35,7 @@ public class SecurityConfig {
         
         //권한에 따른 접근 설정
         http.authorizeRequests()
-            .mvcMatchers("/css/**", "/js/**").permitAll()               //누구나 권한 없이 접근 가능
+            .mvcMatchers("/css/**", "/js/**", "/images/**").permitAll()               //누구나 권한 없이 접근 가능
             .mvcMatchers("/", "/member/**", "item/**").permitAll()      //누구나 권한 없이 접근 가능
             .mvcMatchers("admin/**").hasRole("ADMIN")                   //ADMIN만 접근 가능
             .anyRequest().authenticated();                              //그 외는 권한 받고 사용
