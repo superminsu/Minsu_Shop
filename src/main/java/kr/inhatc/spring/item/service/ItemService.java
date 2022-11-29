@@ -6,12 +6,15 @@ import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.inhatc.spring.item.dto.ItemFormDto;
 import kr.inhatc.spring.item.dto.ItemImgDto;
+import kr.inhatc.spring.item.dto.ItemSearchDto;
 import kr.inhatc.spring.item.entity.Item;
 import kr.inhatc.spring.item.entity.ItemImg;
 import kr.inhatc.spring.item.repository.ItemImgRepository;
@@ -82,5 +85,9 @@ public class ItemService {
         }
 
         return item.getId();
+    }
+    
+    public Page<Item> getAdminItemList(ItemSearchDto itemSearchDto, Pageable pageable){
+        return itemRepository.getAdminItemPage(itemSearchDto, pageable);
     }
 }

@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 @Transactional // Item와 ItemImg 중에 하나라도 에러가 나서 데이터 등록 실패할 때 대비
 public class ItemImgService {
 
-    @Value(value = "itemImgLocation")
+    @Value(value = "${itemImgLocation}")
     private String itemImgLocation;
 
     private final ItemImgRepository itemImgRepository;
