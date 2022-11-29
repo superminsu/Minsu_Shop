@@ -13,8 +13,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import lombok.Getter;
 import lombok.Setter;
 
-@EntityListeners(value = {AuditingEntityListener.class})       //변경 사항 감시
-@MappedSuperclass                                              //다른 클래스에서 사용 가능하게 해줌
+@EntityListeners(value = {AuditingEntityListener.class})    //해당 클래스에 Auditing 기능을 포함
+@MappedSuperclass   //JPA Entity 클래스들이 해당 추상 클래스를 상속할 경우 regTime, updateTine을 컬럼으로 인식
 @Getter
 @Setter
 public abstract class BaseTimeEntity {

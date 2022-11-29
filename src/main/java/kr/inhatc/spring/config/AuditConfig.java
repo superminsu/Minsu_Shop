@@ -6,7 +6,7 @@ import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Configuration
-@EnableJpaAuditing
+@EnableJpaAuditing  //JPA Auditing 활성화
 public class AuditConfig {  //감시 Config
     
     @Bean
